@@ -249,6 +249,8 @@ John and mike both play basketball in different teams. in teh latest 3 games, jo
 
 */
 
+/*
+
 var johnAverage, mikeAverage;
 
 var johnFirstGame, johnSecondGame, johnThirdGame;
@@ -290,4 +292,55 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
 } else {
     console.log("Its a tie with Johns average score being " +johnAverage + " and marys average score being " + maryAverage + " and mikes average score being " + mikeAverage);
 }
+*/
 
+/**************
+ * FUNCTIONS
+ */
+
+ // passing an argument into a function called calculateAge and returning a value. Now we need that value to be store somewhere so we define that below with ageJohn ageMike and ageJane.
+ function calculateAge(birthYear){
+     return 2018 - birthYear;
+ }
+
+ var ageJohn = calculateAge(1990);
+ var ageMike = calculateAge(1948);
+ var ageJane = calculateAge(1969);
+ console.log(ageJohn, ageMike, ageJane);
+
+//we create a function here with 2 arguments to pass through.
+ function yearsUntilRetirement(year, firstName){
+    //we call upon the function calcualteAge with the year argument passed through and storing it in the age variable. 
+    var age = calculateAge(year);
+    //the retirement variable simply calcualtes retirement based on retiremement age of 65
+     var retirement = 65 - age;
+     if (retirement > 0) {
+     console.log(firstName + " retires in " + retirement + " years.");}
+     else {
+         console.log(firstName + " has already retired.");
+     }
+     //no return here since we dont need it to return anything outside of this function.
+ }
+
+ //we call upon the yearsUntilRetirement function from here.
+ yearsUntilRetirement(1990, "John");
+ yearsUntilRetirement(1948, "Mike");
+ yearsUntilRetirement(1969, "Jane");
+
+ /**
+  * 
+  * Function Statements and Expressions
+  * 
+  */
+
+  //function declaration
+  /*
+  function whatDoYouDo(job, firstName){
+
+  }
+*/
+  //Function expression
+
+  var whatDoYouDo = function(job, firstName){
+
+  }
