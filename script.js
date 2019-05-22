@@ -197,7 +197,7 @@ console.log("Is Mark's BMI greater than Johns? " + johnVsMark);
 /*
 ******************BOOLEAN LOGIC******
 */
-
+/*
 var firstName = "john";
 var age = 20;
 
@@ -211,7 +211,83 @@ if (age < 13){
     console.log(firstName + " is a man");
 }
 
-// this is a simple test to see how this syncs with the rest of my code.
+/*
+Truthy and falsy values and equality operators
+*/
 
-//lets make another frther change to this and sync it to github.
+// falsy values: undefined, null, 0, "", NaN
+// truthy values: all values that are not falsy.
+/*
+var height;
+height = 23;
+
+if (height || height === 0){
+    console.log("variable is defined");
+} else {
+    console.log("the variable has not beed defined");
+}
+
+// equality operators
+
+// the == is a non strict equality operator. it convertes the number 23 and converts it to a string in the below if statement. If we were to use === then that is a Strict equality operator. Try to always use === to keep code in check.
+if (height == "23"){
+    console.log("The == operator does type coercion");
+}
+*/
+
+/*
+
+John and mike both play basketball in different teams. in teh latest 3 games, johns team scored 89, 120 and 103 points, while mikes team scored 116, 94 and 123 points.
+
+1. calculate the average score for each team
+2. decide which team wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+3. then change the scores to show different winers. dont forget to take into account there might be a draw (the same average score)
+
+4. EXTRA: mary also plays basketball, and her team scored 97, 134 and 105 points. like before, log the average winner to the console. HINT: you will need the && operator to take the decision. 
+
+5. Like before, change the scores to generate different winners, keeping in mind there might be draw.
+
+*/
+
+var johnAverage, mikeAverage;
+
+var johnFirstGame, johnSecondGame, johnThirdGame;
+var mikeFirstGame, mikeSecondGame, mikeThirdGame;
+
+johnFirstGame = 89;
+johnSecondGame = 120;
+johnThirdGame = 103;
+
+mikeFirstGame = 116;
+mikeSecondGame = 94;
+mikeThirdGame = 123;
+
+maryFirstGame = 97;
+marySecondGame = 134;
+maryThirdGame = 105;
+
+johnAverage = (johnFirstGame + johnSecondGame + johnThirdGame) / 3
+console.log("Johns team average score is " + johnAverage);
+mikeAverage = (mikeFirstGame + mikeSecondGame + mikeThirdGame) / 3
+console.log("Mikes team average score is " + mikeAverage);
+maryAverage = (maryFirstGame + marySecondGame + maryThirdGame) / 3
+console.log("Marys team average score is " + maryAverage);
+
+if (johnAverage > mikeAverage){
+    console.log("John wins against Mike with a average with a score of " + johnAverage);
+} else if (mikeAverage > johnAverage){
+    console.log("Mike wins against John with a average score of " + mikeAverage);
+} else {
+    console.log("its a tie with both Mike and John on " + johnAverage);
+}
+
+if (maryAverage > mikeAverage && maryAverage > johnAverage){
+    console.log("Mary wins in average with a score of " + maryAverage);
+} else if (mikeAverage > maryAverage && mikeAverage > johnAverage){
+    console.log("Mike wins in average with a score of " + mikeAverage);
+} else if (johnAverage > maryAverage && johnAverage > mikeAverage){
+    console.log("John wins in average with a score of " + johnAverage);
+} else {
+    console.log("Its a tie with Johns average score being " +johnAverage + " and marys average score being " + maryAverage + " and mikes average score being " + mikeAverage);
+}
 
