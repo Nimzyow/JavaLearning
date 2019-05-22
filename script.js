@@ -210,3 +210,6 @@ if (age < 13){
 } else {
     console.log(firstName + " is a man");
 }
+
+// this is a simple test to see how this syncs with the rest of my code.
+
