@@ -419,7 +419,7 @@ console.log(isDesigner);
  GOOD LUCK :)
 
  */
-
+/*
 var bills = [124, 48, 268];
 
 console.log("the bills for the 3 restaurants are \n "+"£" + bills[0],"£" + bills[1],"£" + bills[2]);
@@ -444,17 +444,48 @@ var thirdBillFull = tipCalculator(bills[2]);
 
 var fullAmountArray = [firstBillFull, secondBillFull, thirdBillFull];
 console.log("the bills for the 3 restaurants with tips are \n "+ "£" + fullAmountArray[0],"£" + fullAmountArray[1],"£" + fullAmountArray[2]);
+*/
 
+/**
+ * 
+ * OBJECTS AND PROPERTIES
+ * 
+ */
+/*
+ //initialise object with variables inside (Object literal)
+var john = {
+    firstName: "John", 
+    lastName: "Smith",
+    birthYear: 1990,
+    family: ["Jane", "Mark", "Bob", "Emily"],
+    job: "teacher",
+    isMarried: false
+};
 
+//various ways of retrieiving data from object
+console.log(john.firstName);
+console.log(john["lastName"]);
+var x = "birthYear";
+console.log(john[x]);
 
+//various ways to mutate properties in object
+john.job = "Driver";
+john["isMarried"] = true;
+console.log(john);
 
+//another way of initialising an object (new object syntax)
+var jane = new Object();
+jane.firstName = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith";
+console.log(jane);
+*/
 
-
-
-
-
-
-
+/**
+ * 
+ * OBJECTS AND METHODS
+ * 
+ */
 
 
 
