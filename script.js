@@ -341,7 +341,7 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
   }
 */
   //Function expression
-
+/*
   var whatDoYouDo = function(job, firstName){
     switch(job){
         case "Teacher":
@@ -358,3 +358,60 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
   console.log(whatDoYouDo("Teacher", "John"));
   console.log(whatDoYouDo("Designer", "Mary"));
   console.log(whatDoYouDo("Driver", "Kane"));
+  */
+
+  /**
+   * 
+   * ***********ARRAYS**********
+   * 
+   */
+
+   //one way of calling an array (and the most popular way) is
+   var names = ["John", "Mark", "Jane"];
+   // another way of calling an array is
+   var years = new Array(1990, 1969, 1948);
+
+   console.log(names);
+   console.log(names.length);
+
+   //mutate array data
+   names[1] = "Ben";
+   names[names.length] = "Mary";
+   console.log(names);
+
+   // different data types
+
+var john = ["John", "Smith", 1990, "designer", false];
+
+//below pushes value of Blue to the end of the john array
+john.push("Blue");
+//below places the var Mr to the beginning of the array
+john.unshift("Mr");
+console.log(john);
+
+//below deletes an array from the end
+john.pop();
+john.pop();
+//below deteles an array from the beginning.
+john.shift();
+console.log(john);
+
+//the indexof method reveals the position of an array.
+console.log(john.indexOf(1990));
+
+// -1 will be shown if a value searched for (using the indexOf method) is not in the array. we can tehn simply say that if the value is -1 then john is not a designer. 
+// var test = john.indexOf("nice") === -1 ? "something" : "something else"
+var isDesigner = john.indexOf("designer") === -1 ? "John is NOT a designer" : "John is a designer";
+
+console.log(isDesigner);
+
+
+
+
+
+
+
+
+
+
+
