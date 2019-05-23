@@ -486,7 +486,62 @@ console.log(jane);
  * OBJECTS AND METHODS
  * 
  */
+/*
+var john = {
+    firstName: "John", 
+    lastName: "Smith",
+    birthYear: 1992,
+    family: ["Jane", "Mark", "Bob", "Emily"],
+    job: "teacher",
+    isMarried: false,
+    //below is a method within an object
+    calcAge: function (birthYear){
+        this.age =  2018 - this.birthYear;
+    }
+};
 
+john.calcAge();
+console.log(john);
+*/
 
+/**
+ Lets remember hte first coding challenege where mark and john compared their BMIs. lets now implement the same functionality with objects and methods.
+ !) for each of them, create an object with properties for theri full name, mass, and height
+ 2) then add a method to each object to calcualte the BMI. save the bmi to the object and also return it from teh method.
+ 3) in teh end, log to the console who has the highest BMI, together with teh full name and respective BMI. dont forget they might have the same BMI.
 
+ remmeber: BMI = mass / height^2. (mass in kg and height in meters).
 
+ */
+
+var john = {
+    fullName: "John Smith",
+    mass: 90,
+    height: 1.78,
+    calcBmi: function(mass, height){
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+john.calcBmi();
+console.log(john.bmi);
+
+var mark = {
+    fullName: "Mark Smith",
+    mass: 80,
+    height: 1.77,
+    calcBmi: function(mass, height){
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+mark.calcBmi();
+console.log(mark.bmi);
+
+if (john.bmi > mark.bmi){
+    console.log("Johns BMI is greater than Marks BMI");
+} else if (mark.bmi > john.bmi){
+    console.log("Marks BMI is greater than Johns BMI")
+} else if (mark.bmi == john.bmi){
+    console.log("Both John and Marks BMI are the same");
+}
