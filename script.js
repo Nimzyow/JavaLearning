@@ -299,6 +299,7 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
  */
 
  // passing an argument into a function called calculateAge and returning a value. Now we need that value to be store somewhere so we define that below with ageJohn ageMike and ageJane.
+ /*
  function calculateAge(birthYear){
      return 2018 - birthYear;
  }
@@ -342,5 +343,18 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
   //Function expression
 
   var whatDoYouDo = function(job, firstName){
-
+    switch(job){
+        case "Teacher":
+            return firstName + " teaches kids how to code";
+        case "Driver":
+            return firstName + " Drives a cab in Lisbon."
+        case "Designer":
+            return firstName + " designs beautiful websites";
+        default:
+            return firstname + " does something else";
+    }
   }
+
+  console.log(whatDoYouDo("Teacher", "John"));
+  console.log(whatDoYouDo("Designer", "Mary"));
+  console.log(whatDoYouDo("Driver", "Kane"));
