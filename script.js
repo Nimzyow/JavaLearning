@@ -365,7 +365,7 @@ if (maryAverage > mikeAverage && maryAverage > johnAverage){
    * ***********ARRAYS**********
    * 
    */
-
+/*
    //one way of calling an array (and the most popular way) is
    var names = ["John", "Mark", "Jane"];
    // another way of calling an array is
@@ -404,6 +404,50 @@ console.log(john.indexOf(1990));
 var isDesigner = john.indexOf("designer") === -1 ? "John is NOT a designer" : "John is a designer";
 
 console.log(isDesigner);
+*/
+/**
+ John and his family went on a holiday and went to 3 different restaurants. the bills were £124, £48, and £268.
+
+ to tip the waiter a fair amount, John created a simple tip calcualter (as a function). he likes to tip 20% of the bill when the bill is less than £50, 15% when the bill is between £50 and £200, and 10% if the bill is more than £200.
+
+ in the end, John would like to have 2 arryas:
+ 1) containing all three tips (one for each bill)
+ 2) containing all three final paid amounts (bill + tip).
+
+ (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+
+ GOOD LUCK :)
+
+ */
+
+var bills = [124, 48, 268];
+
+console.log("the bills for the 3 restaurants are \n "+"£" + bills[0],"£" + bills[1],"£" + bills[2]);
+
+function tipCalculator(bill){
+    var percentage;
+    if(bill <= 50){
+        percentage = 0.2;
+    } else  if (bill > 50 && bill <= 200){
+        percentage = 0.15
+    } else if (bill > 200){
+        percentage = 0.10;
+    }
+    var tipOwed = bill * percentage;
+    var fullAmountOwed = tipOwed + bill;
+    return fullAmountOwed;
+}
+
+var firstBillFull = tipCalculator(bills[0]);
+var secondBillFull = tipCalculator(bills[1]);
+var thirdBillFull = tipCalculator(bills[2]);
+
+var fullAmountArray = [firstBillFull, secondBillFull, thirdBillFull];
+console.log("the bills for the 3 restaurants with tips are \n "+ "£" + fullAmountArray[0],"£" + fullAmountArray[1],"£" + fullAmountArray[2]);
+
+
+
+
 
 
 
