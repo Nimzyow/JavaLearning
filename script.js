@@ -626,7 +626,6 @@ GOOD LUCK 😀
 */
 
 var john = {
-
     bill: [124, 48, 268, 180, 42],
     tips:[],
     fullAmount:[],
@@ -648,7 +647,75 @@ var john = {
     }
 }
 john.calcTip();
-console.log(john.tips);
-console.log(john.fullAmount);
+console.log("Johns tips "+john.tips);
+console.log("Johns Full amount "+john.fullAmount);
+
+var mark = {
+    bill: [77, 375, 110, 45],
+    tips: [],
+    fullAmount:[],
+    calcTip: function(){       
+        for (var i = 0; i < this.bill.length; i++){
+            // determine percentage based on tipping rules
+        if(this.bill[i] < 100){
+            percentage = 0.2;
+        } else if(this.bill[i] >= 100 && this.bill[i] < 300) {
+            percentage = 0.10;
+        } else if (this.bill[i] >= 300){
+            percentage = 0.25;
+        }
+    //calculate tip and then assigning it to an array.
+       tipOwed = percentage * this.bill[i];
+       this.tips.push(tipOwed);
+       //calculate total and then assigning it to an array.
+       total = tipOwed + this.bill[i];
+       this.fullAmount.push(total);
+    }
+}
+}
+
+mark.calcTip();
+console.log("Marks tips "+ mark.tips);
+console.log("Marks full amount "+mark.fullAmount);
+
+function averageTips(arrayToIterate){
+    var tipSum = 0;
+    for(var i = 0; i < arrayToIterate.length; i++){
+         tipSum = arrayToIterate[i] + tipSum;
+    }
+    averageTip = tipSum / arrayToIterate.length;
+    return averageTip;
+}
+john.averageTips = averageTips(john.tips);
+mark.averageTips = averageTips(mark.tips);
+//console.log("Johns average tip is " + averageTips(john.tips));
+//console.log("Marks average tip is " + averageTips(mark.tips));
+console.log("Johns average tip is " + john.averageTips);
+console.log("Marks average tip is " + mark.averageTips);
+console.log(john);
+console.log(mark);
+
+if(john.averageTips > mark.averageTips){
+    console.log("Johns family pays higher on tips");
+} else if (mark.averageTips > john.averageTips){
+    console.log("Marks family pays higher on tips");
+} else {
+    console.log("John and Marks family pay the same in tips");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
