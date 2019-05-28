@@ -703,11 +703,12 @@ if(john.averageTips > mark.averageTips){
     console.log("John and Marks family pay the same in tips");
 }
 */
-
+/*
 // Lecture: Hoisting
-// functions
+
 calculateAge(1965);
 
+// functions
 function calculateAge(year){
     console.log(2016-year);
 }
@@ -733,8 +734,32 @@ function foo() {
 foo();
 console.log(age);
 
+*/
 
+// Example to sohw teh difference between execution stack and scope chain
 
+//global variable
+var a = "Hello";
+
+first();
+
+function first(){
+    var b = "Hi!";
+    second();
+
+    function second(){
+        var c = "Hey";
+        third();
+}
+}
+
+function third(){
+    var d = "John";
+    //the below log cannot access variable c because the execution stack is different from the scope chain. 
+   // console.log(c);
+// the only variables this function can access is variables a and d. this is because a is a global variable and d is a variable within this function.
+console.log(a + d);
+}
 
 
 
