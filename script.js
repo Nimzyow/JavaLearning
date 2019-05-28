@@ -624,7 +624,7 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 8. Log to the console which family paid the highest tips on average
 GOOD LUCK 😀
 */
-
+/*
 var john = {
     bill: [124, 48, 268, 180, 42],
     tips:[],
@@ -702,16 +702,36 @@ if(john.averageTips > mark.averageTips){
 } else {
     console.log("John and Marks family pay the same in tips");
 }
+*/
+
+// Lecture: Hoisting
+// functions
+calculateAge(1965);
+
+function calculateAge(year){
+    console.log(2016-year);
+}
 
 
+// retirement(1965);
 
 
+var retirement = function(year){
+    console.log(65-(2016-year));
+}
 
+//variables
+console.log(age);
+var age = 23;
+//console.log(age);
 
-
-
-
-
+function foo() {
+    console.log(age);
+    var age = 65;
+    console.log(age);
+}
+foo();
+console.log(age);
 
 
 
